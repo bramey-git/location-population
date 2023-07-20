@@ -30,7 +30,6 @@ describe('Update population', () => {
   it('should create location if new location', async () => {
     const response = await request(baseUrl)
       .put(`/api/population/state/Testing/city/Testingham`).send({population: '124578'});
-    console.log(response)
     expect(response.statusCode).toBe(201);
     expect(response.body.population).toBe('124578');
   });
